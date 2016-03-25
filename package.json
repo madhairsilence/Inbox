@@ -1,0 +1,32 @@
+{
+  "name": "inbox",
+  "version": "1.0",
+  "description": "Inbox",
+  "keywords": [
+    "jquery-plugin"
+  ],
+  "author": {
+    "name": "Harish Kumar",
+    "email": "harishsyndrome@gmail.com",
+    "url": "https://github.com/madhairsilence"
+  },
+  "repository": "madhairsilence/inbox",
+  "license": "MIT",
+  "scripts": {
+    "test": "grunt"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.1.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-qunit": "^1.1.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jshint-stylish": "^2.1.0",
+    "load-grunt-tasks": "^3.4.1",
+    "time-grunt": "^1.3.0"
+  }
+}
