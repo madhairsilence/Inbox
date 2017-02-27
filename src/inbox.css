@@ -1,33 +1,31 @@
 .inbox-container{
-	width : 95%;
-	height: 95%;	
-	margin:10px 10px 0px 30px;
-	box-shadow: 0px 0px 20px 1px #036d88;
+	width : 100%;
+	height: 90%;	
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-size:14px;
 	background: #fff;
 	color:#032d38;
 }
-.inbox-container .main-section{height:100%;width:89.7%;background: #fff;margin-left:10%;;}
-.inbox-container .main-section .header-section{height:50px;padding:30px;border-bottom: 1px solid #eaeaea;}
+.inbox-container .main-section{height:100%;width:90%;background: #fff;margin-left:10%;}
+.inbox-container .main-section .header-section{height:10%;padding:30px;border-bottom: 1px solid #eaeaea;}
 .inbox-container .main-section .header-section h3{margin-top:0px;margin-bottom:5px;}
 
-.inbox-container .folders{height:94.9%;width:10%;text-align:center;border:1px solid #ccc;font-size: 14px;background: #fff;position:absolute;}
+.inbox-container .folders{height:99.8%;width:10%;text-align:center;border:1px solid #ccc;font-size: 14px;background: #fff;float:left;}
 .inbox-container .folders ul{ list-style:none;padding:0px;}
 .inbox-container .folders ul li{height:60px;width:100%;cursor:pointer;border-bottom:1px solid #dadada;cursor: pointer;font-size:16px;line-height: 60px;font-weight:bold;}
 .inbox-container .folders ul li:hover{background:#2DABFF; color:#fff; }
 
-.inbox-container .labels{background: #fff;height:30px;padding:10px 20px;box-shadow: 0px 5px 5px 1px #ececec;}
+.inbox-container .labels{background: #fff;height:3%;padding:10px 20px;}
 .inbox-container .labels ul{ list-style:none;margin:0px;width: 100%;}
 .inbox-container .labels ul li{height:10px;padding:5px;margin-left:5px;float:left;cursor:pointer;width:10%;}
 
-.inbox-container .mails{padding:10px 10px 20px 10px;height:30%;border-bottom:1px solid #dadada;overflow-y: scroll;box-shadow: 0px 5px 10px 1px #ccc;}
-.inbox-container .mails ul{ list-style: none;margin:0px;cursor:pointer;padding:0px;}
-.inbox-container .mails ul li{cursor:pointer;padding:10px;border-bottom: 1px solid #eaeaea;line-height: 20px;font-weight: bold;}
-.inbox-container .mails ul li:hover{background: #eaeaea;}
-.inbox-container .mails ul li .sender{font-size:12px; color:#8a8a8a;font-weight: normal;}
+.inbox-container .main-section .mails{padding:10px 10px 20px 10px;max-height:65%;border-bottom:1px solid #dadada;overflow-y: scroll;width:40%;float:left;}
+.inbox-container .main-section .mails ul{ list-style: none;margin:0px;cursor:pointer;padding:0px;}
+.inbox-container .main-section .mails ul li{cursor:pointer;padding:10px;border-bottom: 1px solid #eaeaea;line-height: 20px;font-weight: bold;}
+.inbox-container .main-section .mails ul li:hover{background: #eaeaea;}
+.inbox-container .main-section .mails ul li .sender{font-size:12px; color:#8a8a8a;font-weight: normal;}
 
-.inbox-container .mailBody{left:10%;padding:10px 30px;height:40%;overflow-y: scroll;width:auto;background: #fff;width:95%;}
+.inbox-container .mailBody{padding:10px 30px;height:65%;overflow-y: scroll;width:auto;background: #fff;width:48%;float :left;}
 
 code{background: #eaeaea;font-style: italic;font-size:90%;padding:5px;margin-bottom: 5px;}
 ul.mylist{width:100%;}

@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,600);
 body{margin:0 auto;color:#fff;}
-
 *:not(.fa){font-family: 'Lato', sans-serif !important;}
 .center{text-align: center;}
 .secondary-color{color:#fff;}
@@ -30,7 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28c4eb', end
 #features ul{font-size: 25px;list-style: none;margin-left: 0px;padding: 0px;background: white; padding:20px;border-radius: 5px;text-align: left;}
 #features ul li{padding:5px;color:#0db0d9;}
 
-#inbox-div{margin:10px;}
+#inbox-div{height:750px;width:1000px;margin-left:10%;margin-top:15px; }
 
 
 .button{padding:20px; border-radius: 5px; background: #19bb79;box-shadow: 0px 0px 5px 2px #19bb79 inset ;cursor: pointer;}
