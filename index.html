@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet"/>
+		<link href="src/inbox.css" rel="stylesheet"/>		
+		<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>						
+	</head>
+	<body>
+		<div  class="slide">
+			<div id="welcome" class="slide-item">
+				<div class="center light"> Welcome to <strong class="title"> Inbox </strong> </div>
+				<div class="center caption secondary-color"> A line of HTML , A line of JS to a Full Fledged INBOX</div>
+			</div>
+			<div id="about"  class="slide-item">
+				<div class="center"> 
+					<div class="meta"> $('#yourDiv')</div>
+					<div class="call">
+						<div> .Inbox(); </div>
+						<div class="tip"> Your inbox gets ready here ! </div>
+					</div>					
+				</div>
+			</div>
+			<div id="features"  class="slide-item">
+				<div class="center"> 
+					<div> Features </div>
+					<ul class="list light">
+						<li>  &#10004; { HTML5 + JS + CSS } </li>
+						<li>  &#10004; jQuery  </li>
+						<li>  &#10004; Responsive </li>
+						<li>  &#10004; Folders & Categories  </li>
+						<li>  &#10004; Fully Customizable </li>
+						<li>  &#10004; Open Source </li>
+					</ul>
+					<div class="button" id="demo"> Watch Demo </div>
+				</div>
+			</div>
+			<div id="inbox-div" class="slide-item">
+				<div id="inbox">
+				</div>
+			</div>
+		</div>		
+		<script src="dist/jquery.inbox.min.js"></script>
+		<script src="test/documentation.js"></script>		
+		<script src="demo.js"></script>		
+		<script>		
+			var options = {				
+				onInit : function(response){
+					$('#log').append('<li><b> Load Event : </b> Inbox Loaded </li>');
+				},
+				onFolderSelect : function(response){
+					$('#log').append('<li><b> Folder : </b>'+ response +' Clicked</li>');
+				},
+				onLabelSelect : function(response){
+					$('#log').append('<li><b> Label : </b>'+ response +' Clicked</li>');
+				},
+				onMailSelect : function(response){
+					$('#log').append('<li><b> Mail : </b>'+ response +' Clicked</li>');
+				}
+			};
+			var inbox = $('#inbox').Inbox(options);
+
+			inbox.Inbox('setData',documentation, function(){
+				$('#log').append('<li><b> Inbox Update : </b>Inbox data updated</li>');
+			});
+		</script>
+	</body>
+</html>

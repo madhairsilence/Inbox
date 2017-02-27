@@ -37,6 +37,12 @@ module.exports = function (grunt) {
         dest: 'dist/jquery.<%= pkg.name %>.min.js'
       }
     },
+    cssmin: {
+      dist: {
+        src: '<%= concat.dist.dest %>',
+        dest: 'dist/jquery.<%= pkg.name %>.min.css'
+      }
+    }
     qunit: {
       all: {
         options: {
