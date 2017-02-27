@@ -1,3 +1,5 @@
+/*! inbox - v1.0 - 2017-02-27
+* Copyright (c) 2017 Harish Kumar; Licensed MIT */
 /*! inbox - v1.0 - 2016-03-25
 * Copyright (c) 2016 Harish Kumar; Licensed MIT */
 (function ($) {
@@ -9,9 +11,9 @@
       data  : [],
       punctuation : '.',
       onInit : function(){},
-      onMailSelect : function(mailId){},
-      onFolderSelect : function(folder){},
-      onLabelSelect : function(label){},
+      onMailSelect : function(mailId){ return mailId;},
+      onFolderSelect : function(folder){return  folder;},
+      onLabelSelect : function(label){return  label;},
       unreadCount : 0
   };
 
@@ -23,12 +25,12 @@
             return this;
         },
 
-        buildLayout : function( options) {         
+        buildLayout : function( ) {         
           this.addClass('inbox-container')
             .append(methods.addFolder.apply(this,[]))
             .append(methods.addMainSection.apply(this,[]));
 
-          methods.bindEvents.apply(this,[])         
+          methods.bindEvents.apply(this,[]);
 
         },
 
@@ -98,7 +100,7 @@
 
         },
 
-        addMailBody : function(options){
+        addMailBody : function(){
 
           var mailBodyContainer = $('<div class="mailBody"></div>');          
           var mailBody = $('<div></div>');
@@ -162,8 +164,10 @@
             this.settings.data = data;            
             methods.addMails.apply(this,$(this).find('div.mails'));             
             methods.onMailSelect.apply(this); 
-            if(callback)
+            if(callback){
                 callback();
+            }
+              
         }
 
     };

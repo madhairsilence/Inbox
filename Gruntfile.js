@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       },
       dist: {
         src: ['src/<%= pkg.name %>.js'],
-        dest: 'dist/jquery.<%= pkg.name %>.js'
+        dest: 'dist/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -33,16 +33,19 @@ module.exports = function (grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/jquery.<%= pkg.name %>.min.js'
+        src: '<%= concat.dist.dest%>',
+        dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
     cssmin: {
+      options: {
+        banner: '<%= banner %>'
+      },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/jquery.<%= pkg.name %>.min.css'
+        src: 'src/<%= pkg.name %>.css',
+        dest: 'dist/<%= pkg.name %>.min.css'
       }
-    }
+    },
     qunit: {
       all: {
         options: {
@@ -65,13 +68,13 @@ module.exports = function (grunt) {
           jshintrc: 'src/.jshintrc'
         },
         src: ['src/**/*.js']
-      },
-      test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
-        src: ['test/**/*.js']
       }
+      // test: {
+      //   options: {
+      //     jshintrc: 'test/.jshintrc'
+      //   },
+      //   src: ['test/**/*.js']
+      // }
     },
     watch: {
       gruntfile: {
@@ -98,7 +101,7 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'clean', 'concat', 'uglify', 'cssmin']);
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
