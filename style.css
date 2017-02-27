@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,600);
+body{margin:0 auto;color:#fff;}
+
+*:not(.fa){font-family: 'Lato', sans-serif !important;}
+.center{text-align: center;}
+.secondary-color{color:#fff;}
+.light{font-weight: 400;}
+
+.slide{position: relative;height:100%;background: rgba(40,196,235,1);
+background: -moz-linear-gradient(top, rgba(40,196,235,1) 0%, rgba(0,167,209,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40,196,235,1)), color-stop(100%, rgba(0,167,209,1)));
+background: -webkit-linear-gradient(top, rgba(40,196,235,1) 0%, rgba(0,167,209,1) 100%);
+background: -o-linear-gradient(top, rgba(40,196,235,1) 0%, rgba(0,167,209,1) 100%);
+background: -ms-linear-gradient(top, rgba(40,196,235,1) 0%, rgba(0,167,209,1) 100%);
+background: linear-gradient(to bottom, rgba(40,196,235,1) 0%, rgba(0,167,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28c4eb', endColorstr='#00a7d1', GradientType=0 );}
+
+.slide-item{display: none;position:absolute;width:100%;}
+
+#welcome{font-size: 100px;top:40%;}
+#welcome .title{}
+.caption{font-size: 20px;}
+
+#about{font-size: 60px;top:40%;}
+#about .meta, #about .call{display: inline-block;}
+#about .call{background: #fff;height:100px;color:#0db0d9;padding:20px 10px;border-radius: 5px;font-size:60px;vertical-align: middle;}
+#about .call .tip{font-size: 13px;vertical-align: middle;background:#0db0d9;color:#fff; padding:5px;border-radius: 5px;}
+
+#features{font-size: 60px;top:20%;width:400px;left:36%;}
+#features ul{font-size: 25px;list-style: none;margin-left: 0px;padding: 0px;background: white; padding:20px;border-radius: 5px;text-align: left;}
+#features ul li{padding:5px;color:#0db0d9;}
+
+#inbox-div{margin:10px;}
+
+
+.button{padding:20px; border-radius: 5px; background: #19bb79;box-shadow: 0px 0px 5px 2px #19bb79 inset ;cursor: pointer;}
+
+.warn{padding: 10px;font-weight: 400; background: #FDEE89; border: 3px solid #F3BD45; margin-bottom: 10px;}
+#log{overflow:hidden; list-style: none;width:100%;margin-left: 0px;max-height: 600px;margin-top:0px;font-size: 12px;}
+#log li{padding:5px 10px;}
+
+
